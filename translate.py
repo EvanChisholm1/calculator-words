@@ -2,7 +2,6 @@ from sentence_transformers import SentenceTransformer
 import numpy as np
 
 words = [w.strip() for w in open('./legal-words.txt', 'r').readlines()]
-# print(list(zip([1, 2, 3], ['a', 'b', 'c'])))
     
 model = SentenceTransformer('sentence-transformers/all-MiniLM-L6-v2')
 embeddings = list(zip(words, model.encode(words)))
